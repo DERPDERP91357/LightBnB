@@ -44,7 +44,7 @@ CREATE TABLE property_reviews (
   id SERIAL PRIMARY KEY NOT NULL,
   property_id INTEGER NOT NULL REFERENCES properties(id) ON DELETE CASCADE,
   guest_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  reservations_id INTEGER NOT NULL REFERENCES reservations(id) ON DELETE CASCADE,
+  reservation_id INTEGER NOT NULL REFERENCES reservations(id) ON DELETE CASCADE,
   ratings SMALLINT NOT NULL DEFAULT 0,
   message TEXT
 );
